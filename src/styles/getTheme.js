@@ -244,6 +244,39 @@ export default function getTheme(theme, ...more) {
                 flexDirection: 'row',
             },
         }, theme.dialog)),
+        card: StyleSheet.create(merge({
+            container: {
+                backgroundColor: palette.canvasColor,
+                borderRadius: 2,
+                ...getPlatformElevation(2),
+                width: 280,
+                paddingTop: 24,
+                paddingHorizontal: 24,
+            },
+            titleContainer: {
+                paddingBottom: 20,
+            },
+            titleText: {
+                fontSize: 20,
+                fontWeight: 'bold',
+                color: 'black',
+            },
+            contentContainer: {
+                paddingBottom: 24,
+            },
+            // TODO: merge actionsContainer with actionsInnerContainer
+            actionsContainer: {
+                height: 56,
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+            },
+            actionsInnerContainer: {
+                margin: 8,
+            },
+            defaultActionsContainer: {
+                flexDirection: 'row',
+            },
+        }, theme.card)),
         checkbox: StyleSheet.create(merge({
             container: {
                 flex: 1,
